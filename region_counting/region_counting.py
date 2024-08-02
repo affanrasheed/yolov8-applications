@@ -183,7 +183,7 @@ def run(
                             obj = frame[int(box[1]) : int(box[3]), int(box[0]) : int(box[2])]
                             blur_obj = cv2.blur(obj, (blur_ratio, blur_ratio))
                             frame[int(box[1]) : int(box[3]), int(box[0]) : int(box[2])] = blur_obj
-                        else:
+                        elif blur_class[0] != "":
                             for sel_c in blur_class:
                                 if str(names[cls]) == sel_c:
                                     obj = frame[int(box[1]) : int(box[3]), int(box[0]) : int(box[2])]
@@ -253,7 +253,7 @@ def parse_opt():
     parser.add_argument("--line-thickness", type=int, default=2, help="bounding box thickness")
     parser.add_argument("--track-thickness", type=int, default=2, help="Tracking line thickness")
     parser.add_argument("--region-thickness", type=int, default=4, help="Region thickness")
-    parser.add_argument("--blur-class",type=list_of_strings,default="ALL",help="classes you want to blur in a region. By default all classes")
+    parser.add_argument("--blur-class",type=list_of_strings,default="",help="classes you want to blur in a region. By default all classes")
 
     return parser.parse_args()
 
