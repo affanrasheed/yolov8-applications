@@ -103,6 +103,7 @@ def run(
     line_thickness=2,
     track_thickness=2,
     region_thickness=2,
+    blur_class="ALL",
 ):
     """
     Run Region counting on a video using YOLOv8 and ByteTrack.
@@ -178,9 +179,17 @@ def run(
                 for region in counting_regions:
                     if region["polygon"].contains(Point((bbox_center[0], bbox_center[1]))):
                         region["counts"] += 1
-                        obj = frame[int(box[1]) : int(box[3]), int(box[0]) : int(box[2])]
-                        blur_obj = cv2.blur(obj, (blur_ratio, blur_ratio))
-                        frame[int(box[1]) : int(box[3]), int(box[0]) : int(box[2])] = blur_obj
+                        if blur_class[0]=='ALL':
+                            obj = frame[int(box[1]) : int(box[3]), int(box[0]) : int(box[2])]
+                            blur_obj = cv2.blur(obj, (blur_ratio, blur_ratio))
+                            frame[int(box[1]) : int(box[3]), int(box[0]) : int(box[2])] = blur_obj
+                        else:
+                            for sel_c in blur_class:
+                                if str(names[cls]) == sel_c:
+                                    obj = frame[int(box[1]) : int(box[3]), int(box[0]) : int(box[2])]
+                                    blur_obj = cv2.blur(obj, (blur_ratio, blur_ratio))
+                                    frame[int(box[1]) : int(box[3]), int(box[0]) : int(box[2])] = blur_obj
+
 
         # Draw regions (Polygons/Rectangles)
         for region in counting_regions:
@@ -228,6 +237,8 @@ def run(
     videocapture.release()
     cv2.destroyAllWindows()
 
+def list_of_strings(arg):
+    return arg.split(',')
 
 def parse_opt():
     """Parse command line arguments."""
@@ -242,6 +253,7 @@ def parse_opt():
     parser.add_argument("--line-thickness", type=int, default=2, help="bounding box thickness")
     parser.add_argument("--track-thickness", type=int, default=2, help="Tracking line thickness")
     parser.add_argument("--region-thickness", type=int, default=4, help="Region thickness")
+    parser.add_argument("--blur-class",type=list_of_strings,default="ALL",help="classes you want to blur in a region. By default all classes")
 
     return parser.parse_args()
 
