@@ -3,9 +3,10 @@
 
 ## Workout Monitor Explanation
 In this tutorial, a pretrained yolov8n-pose model will be used to calculate the pose keypoints and using the keypoint calculate the number of repition for an exercise.
-The keypoints of the pose are use to calculate repetition of each exercise. The keypoints use for Pushups and Pullups are [6,8,10] as 
-![keypoints](images/keypoint.png)
-We will be testing three exercises
+The keypoints of the pose are use to calculate repetition of each exercise.
+
+![keypoints](images/keypoints.png)
+
 ### 1. Pushups
 Keypoint use in this exercise are [6,8,11]. The angle between vector from point 6 to 8 and vector from point 8 to 11 helps to calculate the repetition or steps. The angle threshold is set to 145 degrees and 90 degrees.
 ### 2. Pullups
