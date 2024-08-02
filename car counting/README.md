@@ -10,9 +10,7 @@
 7. Counting is performed when a car object cross a line
 
 ## Output Results
-https://github.com/user-attachments/assets/0f97a1be-1a97-4dba-aa44-3dac423286b2
-
-
+[Test Video for Car Counting](https://drive.google.com/file/d/1tP2ApawUHPl-GSNfUpedpxcTbQWaMGHB/view?usp=sharing)
 
 ## Possible Improvements
 1. As only one class is counting so yolov8 model can be optimize for a single class.
