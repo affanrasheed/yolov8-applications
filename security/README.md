@@ -14,5 +14,8 @@ For generating gun detection model, yolov8n model is fine tune on custom dataset
 
 
 ## Output Results
+![alt-txt](cctv_video.gif)
+
+complete video
 [Test Video for Gun Detection](https://drive.google.com/file/d/197TlmMYN8QwHZkrNhfRpAqkB3DUdOLBO/view?usp=sharing)
 
