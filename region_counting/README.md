@@ -28,7 +28,7 @@ In this tutorial, a class object can be counted in a given region and blur a spe
 
 complete video
 [Test Video for No Blur](https://drive.google.com/file/d/103iMTAyS43c7WpTJSubGDx-YfqakS2PM/view?usp=sharing)
-### For Blurring Car Object
+### For Blurring Person Object
 ![alt-txt](blur_person.gif)
 
 complete video
