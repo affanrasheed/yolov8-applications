@@ -22,9 +22,18 @@ Keypoint use in this exercise are [12,14,16]. The angle between vector from poin
    
 ## Output Results
 ### For Pushups
+![alt-txt](workouts_pushup.gif)
+
+complete video
 [Test Video for Pushup](https://drive.google.com/file/d/1quGKTcTT-SqDM5i7gScAMOl7_-RPiPW_/view?usp=sharing)
 ### For Pullups
+![alt-txt](workouts_pullups.gif)
+
+complete video
 [Test Video for Pullups](https://drive.google.com/file/d/11oK1bbtLrO_LbKhbgUHOr9z7A7XecHPq/view?usp=sharing)
 ### For Squats
+![alt-txt](workouts_squats.gif)
+
+complete video
 [Test Video for Squats](https://drive.google.com/file/d/1DbUXVU0nE2_cT6mhVaq3cmuVg3murSss/view?usp=sharing)
 
