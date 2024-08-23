@@ -12,5 +12,8 @@ For generating gun detection model, yolov8n model is fine tune on custom dataset
 
 
 ## Output Results
+![alt-txt](object_blurring_output.gif)
+
+Complete Video
 [Test Video for Gun Blurring](https://drive.google.com/file/d/1cmeNvc-8m-AJ57cVMLRtolah88CGxVy3/view?usp=sharing)
 
