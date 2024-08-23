@@ -10,6 +10,12 @@
 7. Counting is performed when a car object cross a line
 
 ## Output Results
+The output will look like this:
+
+![alt-text](car_counting_output2.gif)
+
+Complete Video
+
 [Test Video for Car Counting](https://drive.google.com/file/d/1tP2ApawUHPl-GSNfUpedpxcTbQWaMGHB/view?usp=sharing)
 
 ## Possible Improvements
